@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp13
+﻿using System.Net.Sockets;
+
+namespace ConsoleApp13
 {
     internal class Program
     {
@@ -27,28 +29,62 @@
             //    Sealed only stops inheritance, not creating objects.
             #endregion
             #region 1. Base Class Ticket
-//public class Ticket
+            //public class Ticket
+            //        {
+            //            private static int counter = 0;
+            //            public int TicketId { get; }
+            //            public string MovieName { get; set; }
+            //            public decimal Price { get; set; }
+            //            public decimal PriceAfterTax => Price * 1.14m;
+
+            //            public Ticket(string name, decimal price)
+            //            {
+            //                counter++;
+            //                TicketId = counter;
+            //                MovieName = name;
+            //                Price = price > 0 ? price : 50;
+            //            }
+
+            //            public static int GetTotalTickets() => counter;
+
+            //            public override string ToString() =>
+            //                $"ID: {TicketId}, Movie: {MovieName}, Price: {Price} LE";
+            //        }
+            #endregion
+            #region 2. Child Classes
+//public class StandardTicket : Ticket
 //        {
-//            private static int counter = 0;
-//            public int TicketId { get; }
-//            public string MovieName { get; set; }
-//            public decimal Price { get; set; }
-//            public decimal PriceAfterTax => Price * 1.14m;
+//            public string SeatNumber { get; set; }
+//            public StandardTicket(string n, decimal p, string s) : base(n, p) => SeatNumber = s;
 
-//            public Ticket(string name, decimal price)
-//            {
-//                counter++;
-//                TicketId = counter;
-//                MovieName = name;
-//                Price = price > 0 ? price : 50;
-//            }
+//            public override string ToString() => base.ToString() + $", Seat: {SeatNumber}";
+//        }
 
-//            public static int GetTotalTickets() => counter;
+//        public class VIPTicket : Ticket
+//        {
+//            public decimal ServiceFee { get; } = 50;
+//            public VIPTicket(string n, decimal p) : base(n, p) { }
 
-//            public override string ToString() =>
-//                $"ID: {TicketId}, Movie: {MovieName}, Price: {Price} LE";
+//            public override string ToString() => base.ToString() + $", Lounge: Yes, Fee: {ServiceFee}";
+//        }
+
+//        public class IMAXTicket : Ticket
+//        {
+//            public bool Is3D { get; set; }
+//            public IMAXTicket(string n, decimal p, bool is3d) : base(n, is3d ? p + 30 : p) => Is3D = is3d;
+
+//            public override string ToString() => base.ToString() + $", 3D: {Is3D}";
 //        }
         #endregion
+
+
+
+
+
+
+
+        }
+
+
     }
-}
 }
