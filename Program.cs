@@ -26,6 +26,29 @@
             // d) New Sealed Class: Yes! You can use 'new' normally. 
             //    Sealed only stops inheritance, not creating objects.
             #endregion
-        }
+            #region 1. Base Class Ticket
+//public class Ticket
+//        {
+//            private static int counter = 0;
+//            public int TicketId { get; }
+//            public string MovieName { get; set; }
+//            public decimal Price { get; set; }
+//            public decimal PriceAfterTax => Price * 1.14m;
+
+//            public Ticket(string name, decimal price)
+//            {
+//                counter++;
+//                TicketId = counter;
+//                MovieName = name;
+//                Price = price > 0 ? price : 50;
+//            }
+
+//            public static int GetTotalTickets() => counter;
+
+//            public override string ToString() =>
+//                $"ID: {TicketId}, Movie: {MovieName}, Price: {Price} LE";
+//        }
+        #endregion
     }
+}
 }
