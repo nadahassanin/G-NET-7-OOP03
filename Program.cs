@@ -52,28 +52,58 @@ namespace ConsoleApp13
             //        }
             #endregion
             #region 2. Child Classes
-//public class StandardTicket : Ticket
-//        {
-//            public string SeatNumber { get; set; }
-//            public StandardTicket(string n, decimal p, string s) : base(n, p) => SeatNumber = s;
+            //public class StandardTicket : Ticket
+            //        {
+            //            public string SeatNumber { get; set; }
+            //            public StandardTicket(string n, decimal p, string s) : base(n, p) => SeatNumber = s;
 
-//            public override string ToString() => base.ToString() + $", Seat: {SeatNumber}";
+            //            public override string ToString() => base.ToString() + $", Seat: {SeatNumber}";
+            //        }
+
+            //        public class VIPTicket : Ticket
+            //        {
+            //            public decimal ServiceFee { get; } = 50;
+            //            public VIPTicket(string n, decimal p) : base(n, p) { }
+
+            //            public override string ToString() => base.ToString() + $", Lounge: Yes, Fee: {ServiceFee}";
+            //        }
+
+            //        public class IMAXTicket : Ticket
+            //        {
+            //            public bool Is3D { get; set; }
+            //            public IMAXTicket(string n, decimal p, bool is3d) : base(n, is3d ? p + 30 : p) => Is3D = is3d;
+
+            //            public override string ToString() => base.ToString() + $", 3D: {Is3D}";
+            //        }
+            #endregion
+            #region 3. Cinema & Projector 
+//public class Projector
+//        {
+//            public void Start() => Console.WriteLine("Projector is ON");
+//            public void Stop() => Console.WriteLine("Projector is OFF");
 //        }
 
-//        public class VIPTicket : Ticket
+//        public class Cinema
 //        {
-//            public decimal ServiceFee { get; } = 50;
-//            public VIPTicket(string n, decimal p) : base(n, p) { }
+//            public string Name { get; set; }
+//            private Projector projector = new Projector(); // Composition
+//            private Ticket[] tickets = new Ticket[20];
 
-//            public override string ToString() => base.ToString() + $", Lounge: Yes, Fee: {ServiceFee}";
-//        }
+//            public void OpenCinema() => projector.Start();
+//            public void CloseCinema() => projector.Stop();
 
-//        public class IMAXTicket : Ticket
-//        {
-//            public bool Is3D { get; set; }
-//            public IMAXTicket(string n, decimal p, bool is3d) : base(n, is3d ? p + 30 : p) => Is3D = is3d;
+//            public void AddTicket(Ticket t)
+//            {
+//                for (int i = 0; i < 20; i++)
+//                {
+//                    if (tickets[i] == null) { tickets[i] = t; break; }
+//                }
+//            }
 
-//            public override string ToString() => base.ToString() + $", 3D: {Is3D}";
+//            public void PrintAll()
+//            {
+//                foreach (var t in tickets) if (t != null) Console.WriteLine(t.ToString());
+//            }
 //        }
         #endregion
 
@@ -83,8 +113,8 @@ namespace ConsoleApp13
 
 
 
-        }
-
-
     }
+
+
+}
 }
